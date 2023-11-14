@@ -30,22 +30,62 @@
         </div>
       </nav>
     </div>
-    <div class="headers">
-      <header class="headerLayout">
-        <div class="leftSite">
-          <img src="header left site.png" alt="left site image " />
+    <div  class="headers">
+      <div id="slider-container">
+        <div id="slider" >
+          <header id="slide"  class="headerLayout">
+            <div class="leftSite">
+              <img src="header left site.png" alt="left site image " />
+            </div>
+            <div class="centerSite">
+              <h1>Creative HTML5 Templates</h1>
+              <h4>Learn More 1</h4>
+            </div>
+            <div class="rightSite">
+              <img src="right sie.png" alt="right site image " />
+            </div>
+          </header>
+          <header id="slide"  class="headerLayout">
+            <div class="leftSite">
+              <img src="header left site.png" alt="left site image " />
+            </div>
+            <div class="centerSite">
+              <h1>Creative HTML5 Templates</h1>
+              <h4>Learn More 2</h4>
+            </div>
+            <div class="rightSite">
+              <img src="right sie.png" alt="right site image " />
+            </div>
+          </header>
+          <header id="slide"  class="headerLayout">
+            <div class="leftSite">
+              <img src="header left site.png" alt="left site image " />
+            </div>
+            <div class="centerSite">
+              <h1>Creative HTML5 Templates</h1>
+              <h4>Learn More 3</h4>
+            </div>
+            <div class="rightSite">
+              <img src="right sie.png" alt="right site image " />
+            </div>
+          </header>
+          <header id="slide"  class="headerLayout">
+            <div class="leftSite">
+              <img src="header left site.png" alt="left site image " />
+            </div>
+            <div class="centerSite">
+              <h1>Creative HTML5 Templates</h1>
+              <h4>Learn More4</h4>
+            </div>
+            <div class="rightSite">
+              <img src="right sie.png" alt="right site image " />
+            </div>
+          </header>
         </div>
-        <div class="centerSite">
-          <h1>Creative HTML5 Templates</h1>
-          <h4>Learn More</h4>
-        </div>
-        <div class="rightSite">
-          <img src="right sie.png" alt="right site image " />
-        </div>
-      </header>
+      </div>
       <div>
-        <button class="prev common">&#60;</button>
-        <button class="next common">&#62;</button>
+        <button id="prev" class="prev common">&#60;</button>
+        <button id="next" class="next common">&#62;</button>
       </div>
       <section>
         <div class="banner">
@@ -53,5 +93,32 @@
         </div>
       </section>
     </div>
+
+    <script>
+      const slider = document.getElementById('slider');
+      const prevButton = document.getElementById('prev');
+      const nextButton = document.getElementById('next');
+      let currentIndex = 0;
+    
+      prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlider();
+        }
+      });
+    
+      nextButton.addEventListener('click', () => {
+        const totalSlides = document.querySelectorAll('#slide').length;
+        if (currentIndex < totalSlides - 1) {
+          currentIndex++;
+          updateSlider();
+        }
+      });
+    
+      function updateSlider() {
+        const newTransformValue = -currentIndex * 100 + '%';
+        slider.style.transform = 'translateX(' + newTransformValue + ')';
+      }
+    </script>
   </body>
 </html>

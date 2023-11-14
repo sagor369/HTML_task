@@ -34,16 +34,15 @@
   padding: 5px 8px;
   cursor: pointer;
 }
-.items a{
-    text-decoration: none;
-    text-transform: uppercase;
+.items a {
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 /* navbar dropdown select css  */
 .items select {
   border: none;
   text-transform: uppercase;
-
 }
 
 /* navbar buy btn css */
@@ -79,7 +78,24 @@
 .banner {
   display: flex;
   justify-content: center;
+
 }
+
+#slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+#slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+#slide {
+    width: 97%;
+    flex: 0 0 auto;
+  }
 
 /* slider button css  */
 .common {
@@ -88,19 +104,46 @@
   border-radius: 4px;
   font-size: 20px;
   box-shadow: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* slider prev button css  */
 .prev {
-  position: absolute;
-  top: 50%;
   left: 0;
 }
 
 /* slider next button css  */
 .next {
-  position: absolute;
-  top: 50%;
   right: 0;
 }
 /* header css end */
+
+
+@media (max-width: 786px){
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: left;
+        align-items: start;
+        padding: 0 10px;
+      }
+
+      .items {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+      }
+
+      .headerLayout {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 20px;
+        margin: 30px 0;
+      }
+    
+}

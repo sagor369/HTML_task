@@ -34,10 +34,16 @@
   padding: 5px 8px;
   cursor: pointer;
 }
+.items a{
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
 /* navbar dropdown select css  */
 .items select {
   border: none;
+  text-transform: uppercase;
+
 }
 
 /* navbar buy btn css */

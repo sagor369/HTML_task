@@ -4,7 +4,7 @@
   color: white;
 }
 
-
+/* navbar all css start  */
 .navbar {
   height: 60px;
   display: flex;
@@ -13,14 +13,20 @@
   align-items: center;
   padding: 10px 100px;
 }
+
+/* logo image css */
 .logo img {
   height: 40px;
   width: 200px;
 }
+
+/* navbar all link layout css */
 .items {
   display: flex;
   column-gap: 10px;
 }
+
+/* navbar link item css */
 .items li {
   list-style-type: none;
   border: 1px;
@@ -28,19 +34,27 @@
   padding: 5px 8px;
   cursor: pointer;
 }
+
+/* navbar dropdown select css  */
 .items select {
   border: none;
 }
+
+/* navbar buy btn css */
 .items button {
   border: 1px solid white;
   border-radius: 4px;
   padding: 2px 8px;
   margin-left: 30px;
 }
+
+/* navbar css end  */
+
+/* header css start  */
 .headers {
   position: relative;
 }
-
+/* header body layout  */
 .headerLayout {
   display: flex;
   column-gap: 5px;
@@ -49,15 +63,19 @@
   padding: 0 20px;
   margin-top: 30px;
 }
-
+/* header content css  */
 .centerSite {
   text-align: center;
   text-transform: uppercase;
 }
+
+/* header down image css  */
 .banner {
   display: flex;
   justify-content: center;
 }
+
+/* slider button css  */
 .common {
   padding: 12px;
   background-color: rgba(255, 255, 255, 0.354);
@@ -65,13 +83,18 @@
   font-size: 20px;
   box-shadow: none;
 }
+
+/* slider prev button css  */
 .prev {
   position: absolute;
   top: 50%;
   left: 0;
 }
+
+/* slider next button css  */
 .next {
   position: absolute;
   top: 50%;
   right: 0;
 }
+/* header css end */
